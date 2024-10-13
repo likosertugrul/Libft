@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-    char str[40] = "Ertugrul";
-    char str2[20] = "Likos";
-    memcpy(str, str2, 3);
+    size_t i = 0;
 
-    printf("%s \n", str);
-    printf("%s \n", str2);
+    while (i < n)
+    {
+        ((char *) dest)[i] = ((char *) src)[i];
+        i++;
+    }
+    return 0;
 }
+

@@ -1,16 +1,8 @@
 #include "libft.h"
 #include <stdio.h>
+#include <ctype.h>
 
-
-#include <stdio.h>
-int main(void)
+int main (void)
 {
-
-
-		int a = ft_isalpha('a');
-
-
-	printf("%d \n", a);
-
-
+    printf("%c", ft_tolower('A'));
 }
