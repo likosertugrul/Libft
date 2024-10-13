@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/13 18:15:00 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/13 18:15:52 by elikos           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-    int i = 0;
-    while (str[i] != 0)
-    {
-        i++;
-    }
+	int	i;
 
-    return i;
+	i = 0;
+	while (str[i] != 0)
+	{
+		i++;
+	}
+	return (i);
 }

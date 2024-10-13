@@ -1,14 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/13 18:16:04 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/13 18:16:30 by elikos           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if ((c >= 65) && (c <= 90))
-    {
-        c += 32;
-    }
-    return c;
-
+	if ((c >= 65) && (c <= 90))
+	{
+		c += 32;
+	}
+	return (c);
 }

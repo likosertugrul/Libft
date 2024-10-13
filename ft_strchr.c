@@ -1,17 +1,30 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/13 18:08:55 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/13 18:09:30 by elikos           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_strchr(char *s, int c)
 {
-    int i = 0;
-    char *str = (char *)s;
+    int i;
+    char *str;
+
+    i = 0;
+    str = (char *)s;
     while (str[i] != c)
     {
         str[i] = 0;
         i++;
     }
-    return str;
+    return (str);
 }
 
 int main(void)
