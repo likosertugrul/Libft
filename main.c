@@ -6,8 +6,7 @@
 
 int main(void)
 {
-    char name[20] = "Ertugrul";
-    char *s;
-    s = strchr(name, 'u');
-    printf("%ld", s - name);
+
+
+    printf("%s\n %s\n ", ft_strchr("teste", 1024), strchr("teste", 1024));
 }

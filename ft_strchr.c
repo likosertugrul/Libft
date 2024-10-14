@@ -1,33 +1,24 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 18:08:55 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/14 13:09:51 by ertugrullik      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-char *ft_strchr(char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
-    int i = 0;
+    unsigned char uc = (unsigned char)c;  // c'yi unsigned char olarak sakla
 
-    while (s[i])
+    // Dizi içinde dolaş
+    while (*s)
     {
-        if (s[i] == (char)c)
+        if (*s == uc)  // Karakteri kontrol et
         {
-            return (char *)(s + i);
+            return (char *)s;  // Bulundu, döndür
         }
-        i++;
+        s++;
     }
 
-    if (c == 0)
+    // Eğer c, null terminatörse dizenin sonunu döndür
+    if (uc == '\0')
     {
-        return (char *)(s + i);
+        return (char *)s;  // Dizenin sonu
     }
-    return NULL;
+
+    return NULL;  // Bulunamadı
 }

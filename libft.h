@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:21:22 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/14 13:09:42 by ertugrullik      ###   ########.fr       */
+/*   Updated: 2024/10/14 19:32:41 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int		ft_toupper(int c);
 
 int		ft_tolower(int c);
 
-char *ft_strchr(char *s, int c);
+char	*ft_strchr(const char *s, int c);
 
-char *ft_strchr(char *s, int c);
+char	*ft_strrchr(char *s, int c);
 
 #endif
