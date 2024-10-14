@@ -6,13 +6,13 @@
 /*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:48:53 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/14 18:55:46 by elikos           ###   ########.fr       */
+/*   Updated: 2024/10/14 19:34:56 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
 	int		i;
