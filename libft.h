@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:21:22 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/13 18:25:17 by elikos           ###   ########.fr       */
+/*   Updated: 2024/10/14 13:09:42 by ertugrullik      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 
 int		ft_tolower(int c);
+
+char *ft_strchr(char *s, int c);
+
+char *ft_strchr(char *s, int c);
 
 #endif
