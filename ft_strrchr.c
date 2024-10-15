@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 18:48:53 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/14 19:34:56 by elikos           ###   ########.fr       */
+/*   Created: 2024/10/15 19:42:44 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/15 19:45:21 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*last;
+	char	*name;
 	int		i;
 
+	name = (char *)s;
 	i = 0;
-	while (s[i])
+	while (name[i])
 	{
-		if (s[i] == (char)c)
-		{
-			last = (char *)(s + i);
-		}
 		i++;
 	}
-	if (c == 0)
+	while (i >= 0)
 	{
-		return ((char *)(s + i));
+		if (name[i] == (char)c)
+		{
+			return (name + i);
+		}
+		i--;
 	}
-	return (last);
+	return (0);
 }

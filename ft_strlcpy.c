@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 18:09:44 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/13 18:14:36 by elikos           ###   ########.fr       */
+/*   Created: 2024/10/15 20:05:37 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/15 20:06:25 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 
 	i = 0;
 	len = ft_strlen(src);
+	if (src == NULL)
+	{
+		return (0);
+	}
 	if (dstsize == 0)
 	{
 		return (len);
 	}
-	while (i < (dstsize - 1))
+	while ((i < (dstsize - 1)) && src[i] != 0)
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	while (dest[i] != 0)
-	{
-		dest[i] = 0;
-		i++;
-	}
+	dest[i] = 0;
 	return (len);
 }
