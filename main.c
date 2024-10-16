@@ -6,14 +6,16 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int main (void)
 {
-    char name[20] = "Ertugrul";
-    char surname[20] = "gr";
-
-    char *result;
-    result = strnstr(name, surname, sizeof(name));
-    printf("%s, \n", name);
-    printf("%s, \n", surname);
-    printf("%s, \n", result);
+    char *name;
+    char *surname;
+    char *name2;
+    char *surname2;
+    name = "Ertugrul";
+    name2 = "Ertugrul";
+    surname = strdup(name);
+    surname2 = ft_strdup(name2);
+    printf("%s, %s\n", name, surname);
+    printf("%s, %s\n", name2, surname2);
 }

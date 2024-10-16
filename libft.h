@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:21:22 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/16 18:00:45 by elikos           ###   ########.fr       */
+/*   Updated: 2024/10/17 01:21:50 by ertugrullik      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t len);
 int		ft_atoi(const char *str);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+char *ft_strdup(const char *s1);
 
 #endif
