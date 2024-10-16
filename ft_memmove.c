@@ -1,28 +1,38 @@
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memmove(const void *dst, const void *src, size_t len)
+void *ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char *d;
-    unsigned char *s;
+    char *d;
+    char *s;
+    size_t i;
 
-    d = (unsigned char *)dst;
-    s = (unsigned char *)src;
+    d = (char *)dst;
+    s = (char *)src;
+    i = 0;
 
-    size_t i = 0;
-    while (i < len)
+    if (!d && !s)
     {
-        d[i] = s[i];
-        i++;
+        return  NULL;
     }
-    return d;
 
-}
-int main(void)
-{
-    char name[20] = "Ertugrul";
-    char surname[20] = "Likos";
-    ft_memmove(name,surname, 2);
+    if (d > s)
+    {
+        while (len-- > 0)
+        {
+            d[len] = s[len];
+        }
+    }
+    else
+    {
+        while (i < len)
+        {
+            d[i] = s[i];
+            i++;
+        }
+    }
 
-    printf("%s, %s, \n", name, surname);
+    
+    return dst;
+
 }
