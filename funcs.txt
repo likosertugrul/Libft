@@ -1,0 +1,34 @@
+1.memmove ---
+2.memchr  ---
+3.memcmp  ---
+4.atoi    ---
+5.strnstr
+
+6.strdup 
+7.calloc
+
+*** ADDİTİONAL***
+
+8.substr
+9.strjoin
+10.strtrim
+11.split
+12.itoa
+13.strmapi
+14.striteri
+15.putcharfd
+16.putstrfd
+17.putendlfd
+18.putnbrfd
+
+**BONUS**
+
+19.lstnew
+20.lstaddfront
+21.lstsize
+22.lstlast
+23.lstaddback
+24.lstdelone
+25.lstclear
+26.lstiter
+27.lstmap
