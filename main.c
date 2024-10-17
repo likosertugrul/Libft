@@ -6,7 +6,7 @@
 /*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 19:15:15 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/17 19:15:16 by elikos           ###   ########.fr       */
+/*   Updated: 2024/10/17 19:34:44 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 //     if (!a)
 //         return NULL;
 
-//     // Belleği sıfırlıyoruz
+//     // Belleği sıfsırlıyoruz
 //     ft_bzero(a, count * size);
 
 //     // Sıfırlanmış bellek adresini geri döndürüyoruz
