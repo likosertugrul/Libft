@@ -4,7 +4,7 @@
 4.ft_atoi       **---**
 5.ft_strnstr      ---
 
-6.ft_strdup       ---
+6.ft_strdup     **---**
 7.ft_calloc
 
 *** ADDİTİONAL***

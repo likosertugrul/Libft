@@ -1,26 +1,29 @@
-#include <stdio.h>
-#include "libft.h"
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 19:15:15 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/17 19:15:16 by elikos           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+// #include "libft.h"
 
-#include <stdio.h>
-#include <string.h>
+// void *ft_calloc(size_t count, size_t size)
+// {
+//     // Toplam bellek miktarını hesaplıyoruz
+//     void *a = (void *)malloc(count * size);
 
-int main (void)
-{
-    char *name;
-    char *surname;
-    char *name2;
-    char *surname2;
-    char *res;
-    char *son;
-    name = "Ertugrul";
-    name2 = "Ertugrul";
-    surname = "gr";
-    surname2 = "gr";
+//     // Bellek tahsisi başarısız olursa NULL döndürüyoruz
+//     if (!a)
+//         return NULL;
 
-    res = strnstr(name, surname, sizeof(name));
-    son = ft_strnstr(name2, surname2, sizeof(name2));
-    printf("%s, %s, %s \n", name, surname, res);
-    printf("%s, %s, %s \n", name2, surname2, son);
-}
+//     // Belleği sıfırlıyoruz
+//     ft_bzero(a, count * size);
+
+//     // Sıfırlanmış bellek adresini geri döndürüyoruz
+//     return a;
+// }
