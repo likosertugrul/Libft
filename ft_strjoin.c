@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 20:05:37 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/18 18:01:06 by elikos           ###   ########.fr       */
+/*   Created: 2024/10/18 18:15:04 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/18 18:16:04 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	int		len;
+	char	*result;
+	size_t	first_len;
+	size_t	second_len;
 
-	i = 0;
-	len = ft_strlen(src);
-	if (src == NULL)
+	first_len = ft_strlen(s1);
+	second_len = ft_strlen(s2);
+	result = malloc(sizeof(char) * (first_len + second_len + 1));
+	if (!s1 || !s2)
 	{
-		return (0);
+		return (NULL);
 	}
-	if (dstsize == 0)
+	if (!result)
 	{
-		return (len);
+		return (NULL);
 	}
-	while ((i < (dstsize - 1)) && src[i] != 0)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = 0;
-	return (len);
+	ft_strlcpy(result, s1, first_len + 1);
+	ft_strlcat(result, s2, first_len + second_len + 1);
+	return (result);
 }

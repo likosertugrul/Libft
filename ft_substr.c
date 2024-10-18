@@ -1,21 +1,40 @@
-#include "libft.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/18 17:39:30 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/18 17:41:57 by elikos           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	char *result = (char*)malloc(sizeof(char) * (len + 1));
-	char *start_result = result;
-	i = 0;
-	while (s[i])
+	char	*result;
+	size_t	s_len;
+
+	s_len = ft_strlen(s);
+	result = malloc(sizeof(char) * (len + 1));
+	if (!s)
 	{
-		if (i >= start && i < start + len)
-		{
-			*result = s[i];
-			result++;
-		}
-		i++;
+		return (NULL);
 	}
-	*result = 0;
-	return start_result;
+	if (start >= s_len)
+	{
+		return (ft_strdup(""));
+	}
+	if (start + len > s_len)
+	{
+		len = s_len - start;
+	}
+	if (!result)
+	{
+		return (NULL);
+	}
+	ft_strlcpy(result, s + start, len + 1);
+	return (result);
 }
