@@ -2,14 +2,14 @@
 2.ft_memchr     **---**
 3.ft_memcmp     **---**
 4.ft_atoi       **---**
-5.ft_strnstr      ---
+5.ft_strnstr    **---**
 
 6.ft_strdup     **---**
 7.ft_calloc
 
 *** ADDİTİONAL***
 
-8.ft_substr
+8.ft_substr     -------
 9.ft_strjoin
 10.ft_.strtrim
 11.ft_split
@@ -32,3 +32,4 @@
 25.ft_lstclear
 26.ft_lstiter
 27.ft_lstmap
+Hello, World!
