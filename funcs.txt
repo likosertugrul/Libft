@@ -11,9 +11,9 @@
 
 8.ft_substr     **----**
 9.ft_strjoin    **----**
-10.ft_.strtrim  
+10.ft_.strtrim  **----**
 11.ft_split
-12.ft_itoa
+12.ft_itoa		**----**
 13.ft_strmapi
 14.ft_striteri
 15.ft_putcharfd

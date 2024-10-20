@@ -1,30 +1,42 @@
-// #include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/20 19:37:25 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/20 19:53:13 by elikos           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// char	*ft_strtrim(char const *s1, char const *set)
-// {
-// 	size_t start;
-// 	size_t end;
-// 	char *result;
+#include "libft.h"
 
-// 	start = 0;
-// 	end = ft_strlen(s1);
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	start;
+	size_t	end;
+	char	*result;
 
-// 	if (!s1 || !set)
-// 		return NULL;
-
-
-// 	while (s1[start] && ft_strchr(set, s1[start]))
-// 		start++;
-
-// 	while (end > start && ft_strchr(set, s1[end - 1]))
-// 		end--;
-
-// 	result = malloc(sizeof(char) * (end - start + 1));
-
-// 	if (!result)	
-// 		return NULL;
-
-// 	ft_strlcpy(result , &s1[start], end - start + 1);
-
-// 	return result;
-// }
+	start = 0;
+	end = ft_strlen(s1);
+	if (!s1 || !set)
+	{
+		return (NULL);
+	}
+	while (s1[start] && ft_strchr(set, s1[start]))
+	{
+		start++;
+	}
+	while (end > start && ft_strchr(set, s1[end - 1]))
+	{
+		end--;
+	}
+	result = malloc(sizeof(char) * (end - start + 1));
+	if (!result)
+	{
+		return (NULL);
+	}
+	ft_strlcpy(result, &s1[start], end - start + 1);
+	return (result);
+}

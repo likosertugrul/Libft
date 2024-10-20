@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 17:39:30 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/18 17:41:57 by elikos           ###   ########.fr       */
+/*   Created: 2024/10/20 20:41:22 by elikos            #+#    #+#             */
+/*   Updated: 2024/10/20 20:41:23 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*result;
 	size_t	s_len;
 
-	s_len = ft_strlen(s);
-	result = malloc(sizeof(char) * (len + 1));
 	if (!s)
-	{
 		return (NULL);
-	}
+	s_len = ft_strlen(s);
 	if (start >= s_len)
 	{
-		return (ft_strdup(""));
+		result = malloc(1);
+		if (!result)
+			return (NULL);
+		result[0] = '\0';
+		return (result);
 	}
 	if (start + len > s_len)
-	{
 		len = s_len - start;
-	}
+	result = malloc(sizeof(char) * (len + 1));
 	if (!result)
-	{
 		return (NULL);
-	}
 	ft_strlcpy(result, s + start, len + 1);
 	return (result);
 }
