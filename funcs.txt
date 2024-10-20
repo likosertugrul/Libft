@@ -32,4 +32,10 @@
 25.ft_lstclear
 26.ft_lstiter
 27.ft_lstmap
-Hello, World!
+
+
+
+
+***CHANGES***
+
+ft_isalnum

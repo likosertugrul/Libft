@@ -6,12 +6,12 @@
 /*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:18:25 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/18 01:56:35 by ertugrullik      ###   ########.fr       */
+/*   Updated: 2024/10/18 22:07:26 by ertugrullik      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int	ft_isalnum(int c)
 {
-	return ((((c >= 65) && (c <= 90)) || ((c >= 97) && (c <= 122)))
-		|| ((c >= 48) && (c <= 57)));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
