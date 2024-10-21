@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:21:22 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/21 03:23:57 by ertugrullik      ###   ########.fr       */
+/*   Updated: 2024/10/21 18:25:16 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	ft_putchar_fd(char c, int fd);
 
-void    ft_putstr_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
-void    ft_putendl_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
-void    ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
