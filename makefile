@@ -31,7 +31,7 @@ run : re
 
 push : 
 	git add .
-	git commit -m "To infinity and beyond"
+	git commit -m "zaphood"
 	git push
 
 .PHONY : all clean fclean re 	
