@@ -16,10 +16,10 @@
 12.ft_itoa		**----**
 13.ft_strmapi   **----**
 14.ft_striteri
-15.ft_putcharfd **
-16.ft_putstrfd  **
-17.ft_putendlfd **
-18.ft_putnbrfd
+15.ft_putcharfd **----**
+16.ft_putstrfd  **----**
+17.ft_putendlfd **----**
+18.ft_putnbrfd  **----**
 
 **BONUS**
 
