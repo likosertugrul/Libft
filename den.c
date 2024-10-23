@@ -1,29 +1,58 @@
 #include <stdio.h>
 #include "libft.h"
-
-struct person
+typedef enum
 {
+	bay,
+	bayan,
+}cinsiyet;
+
+typedef enum
+{
+	pazartesi,
+	sali,
+	carsamba,
+	persembe,
+	cuma,
+	cumartesi,
+	pazar,
+}gunler;
+typedef struct
+{
+	int yas;
 	char *name;
-	int age;
-	float height;
-};
+	cinsiyet c;
+	gunler tatil;
+}insan;
+
+int emeklimi(insan *birey)
+{
+	if (birey -> c == bay && birey -> yas >= 55)
+		return 1;
+
+	if (birey -> c == bayan && birey -> yas >= 50)
+		return 1;
+
+	return 0;
+}
+
 
 int main(void)
-
 {
-	struct person first;
-	struct person second;
+	int a;
+	insan ali;
+	insan *veli;
+	veli = (insan *)malloc(sizeof(insan));
+	veli -> name = "Veli";
+	veli -> yas = 20;
+	veli -> c = 0;
+	veli -> tatil = 6;
+	ali.name = "Ali";
+	ali.yas = 65;
+	ali.tatil = 6;
+	ali.c = bay;
+	printf("%s, %d, %u, %u \n", ali.name, ali.yas, ali.tatil, ali.c);
+	printf("%s, %d, %u, %u \n", veli->name, veli->yas, veli->tatil, veli->c);
 
-	first.age = 23;
-	first.name = "Ertugrul";
-	first.height = 172;
-
-	second.age = 23;
-	second.name = "Berke";
-	second.height = 180;
-
-
-		printf("%s, %d, %d \n", first.name, first.age, (int)first.height);
-		printf("%s, %d, %d \n", second.name, second.age, (int)second.height);
-
+	printf("Ali emeklli mi: %d \n", emeklimi(&ali));
+	printf("Veli emeklli mi: %d \n", emeklimi(veli));
 }

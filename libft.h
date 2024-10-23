@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:21:22 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/21 18:25:16 by elikos           ###   ########.fr       */
+/*   Updated: 2024/10/24 02:35:00 by ertugrullik      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
+
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+}				  t_list;
 
 void	*ft_memset(void *b, int c, size_t len);
 
@@ -80,4 +87,7 @@ void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
 
+
+
+t_list *ft_lstnew(void *content);
 #endif
