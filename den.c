@@ -1,58 +1,29 @@
-#include <stdio.h>
 #include "libft.h"
-typedef enum
-{
-	bay,
-	bayan,
-}cinsiyet;
+#include <stdio.h>
 
-typedef enum
+void add_front(t_list **lst, t_list *new)
 {
-	pazartesi,
-	sali,
-	carsamba,
-	persembe,
-	cuma,
-	cumartesi,
-	pazar,
-}gunler;
-typedef struct
-{
-	int yas;
-	char *name;
-	cinsiyet c;
-	gunler tatil;
-}insan;
-
-int emeklimi(insan *birey)
-{
-	if (birey -> c == bay && birey -> yas >= 55)
-		return 1;
-
-	if (birey -> c == bayan && birey -> yas >= 50)
-		return 1;
-
-	return 0;
+	if (!new)
+	{
+		return ;
+	}
+	new->next = *lst;
+	*lst = new;
 }
 
-
-int main(void)
+int main(int argc, char const *argv[])
 {
-	int a;
-	insan ali;
-	insan *veli;
-	veli = (insan *)malloc(sizeof(insan));
-	veli -> name = "Veli";
-	veli -> yas = 20;
-	veli -> c = 0;
-	veli -> tatil = 6;
-	ali.name = "Ali";
-	ali.yas = 65;
-	ali.tatil = 6;
-	ali.c = bay;
-	printf("%s, %d, %u, %u \n", ali.name, ali.yas, ali.tatil, ali.c);
-	printf("%s, %d, %u, %u \n", veli->name, veli->yas, veli->tatil, veli->c);
+	char *s = "Lorem ipsum dolor sit amet";
+	char *str = "Ertugrul Likos";
+	t_list *node;
+	t_list *new_node;
+	node = ft_lstnew((void *)s);
+	printf("%s \n", (char *)node->content);
+	node->next = ft_lstnew((void *)s);
+	printf("%s \n", (char *)node->next->content);
+	new_node = ft_lstnew((void *)str);
+	add_front(&node, new_node);
+	printf("%s \n", (char *)node->content);
 
-	printf("Ali emeklli mi: %d \n", emeklimi(&ali));
-	printf("Veli emeklli mi: %d \n", emeklimi(veli));
+	return 0;
 }

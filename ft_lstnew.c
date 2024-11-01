@@ -14,21 +14,18 @@ t_list *ft_lstnew(void *content)
 }
 
 
-int main(void)
-{
-    char *content = "Lorem ipsum dolor sit amet";
-    t_list *node =ft_lstnew((void *)content);
+// int main(void)
+// {
+//     char *s = "Lorem ipsum dolor sit amet";
+//     t_list *node;
+    
+//     node = ft_lstnew((void *)s);
+//     printf("%s \n", (char *)(node->content));
+//     node->next = ft_lstnew((void *)s);
+//     printf("%s \n", (char *)(node->next->content));
+//     node->next->next = ft_lstnew((void *) s);
+//     printf("%s \n", (char *)(node->next->next->content));
 
-    if (node)
-    {
-        printf("Düğüm oluşturuldu \n");
-        printf("İçerik : %s \n", (char *)node->content);
-        printf("Next : %p \n", node->next);
-    }
-    else
-    {
-        printf("Pov patladin");
-    }
-    free(node);
-    return 0;
-}
+
+//     return 0;
+// }
