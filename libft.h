@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
+/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:21:22 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/24 02:35:00 by ertugrullik      ###   ########.fr       */
+/*   Updated: 2024/11/01 18:50:12 by elikos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-}				  t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 void	*ft_memset(void *b, int c, size_t len);
 
@@ -79,6 +79,8 @@ char	*ft_itoa(int n);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
 void	ft_putchar_fd(char c, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
@@ -87,7 +89,9 @@ void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
 
+char *ft_split(const char *s);
 
+t_list	*ft_lstnew(void *content);
 
-t_list *ft_lstnew(void *content);
+t_list	*ft_lstnew(void *content);
 #endif
