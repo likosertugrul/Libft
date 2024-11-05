@@ -8,7 +8,7 @@ SRC = ft_memset.c ft_bzero.c ft_isalpha.c ft_memcpy.c ft_isdigit.c ft_isalnum.c 
 	ft_strdup.c ft_calloc.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_itoa.c ft_strmapi.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_striteri.c ft_split.c \
 
-BONUS = ft_lstnew.c 
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -32,8 +32,8 @@ fclean : clean
 
 re : fclean all
 
-run : re 
-	gcc -Wall -Wextra -Werror main.c libft.a
+run : re bonus 
+	gcc $(FLAG) main.c libft.a
 	./a.out
 
 push : 

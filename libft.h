@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:21:22 by elikos            #+#    #+#             */
-/*   Updated: 2024/11/01 18:50:12 by elikos           ###   ########.fr       */
+/*   Updated: 2024/11/05 19:01:03 by ertugrullik      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,9 @@ char *ft_split(const char *s);
 
 t_list	*ft_lstnew(void *content);
 
-t_list	*ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+
+int ft_lstsize(t_list *lst);
+
+
 #endif

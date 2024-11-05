@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:44:54 by elikos            #+#    #+#             */
-/*   Updated: 2024/11/01 18:45:51 by elikos           ###   ########.fr       */
+/*   Updated: 2024/11/05 18:49:27 by ertugrullik      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,4 @@ t_list	*ft_lstnew(void *content)
 //     printf("%s \n", (char *)(node->next->next->content));
 //     return 0;
 // }
+
