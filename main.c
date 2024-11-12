@@ -1,20 +1,20 @@
 #include "libft.h"
 
+
 int main(void)
 {
-    char *s;
-    char *p;
-    s = "Lorem ipsum dolor sit amet";
-    p = "ertugrukl lkişkasdf";
-    t_list *new;
-    t_list *last;
-    new = ft_lstnew(s);
-    last = ft_lstnew(p);
-    ft_lstadd_front(&new, last);
-    int a = ft_lstsize(new);
+    char *s = ft_strdup("Lorem ipsum dolor sit amet");
+    char delimeter = ' ';
+    char **res;
 
-    printf("%s \n", (char *)new->content);
-    printf("%s \n", (char *)new->next->content);
-    printf("%d \n", a);
-    return 0;
+    res = ft_split(s, delimeter);
+
+    int i = 0;
+    while (res[i])
+    {
+        printf("%s, \n", res[i]);
+        i++;
+    }
+    
+    
 }

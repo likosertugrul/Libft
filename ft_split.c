@@ -1,102 +1,97 @@
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int ft_isspace(char c) {
-    return (c >= 9 && c <= 13) || c == 32; // Boşluk kontrolü
-}
-
-int word_count(const char *s) {
-    int count = 0;
-    while (*s) {
-        while (ft_isspace(*s)) // Boşlukları atla
-            s++;
-        if (*s) {
-            count++; // Yeni bir kelime
-            while (*s && !ft_isspace(*s)) // Kelimeyi geç
-                s++;
+static int word_counter(char const *str, char c)
+{
+    int i;
+    int count;
+    
+    i = 0;
+    count = 0;
+    while (str[i])
+    {
+        if (str[i] == c)
+        {
+            i++;
+        }
+        else{
+            count++;
+            while (str[i] && str[i] != c)
+            {
+                i++;
+            }
+            
         }
     }
     return count;
+    
 }
 
-char *get_next_word(const char **s)
+static char * create_words(char *word, char const *s, int j, int wordlen)
 {
-    const char *start = *s;
-    while (**s && !ft_isspace(**s)) // Kelimeyi bul
-        (*s)++;
-    int length = *s - start; // Kelimenin uzunluğu
-
-    char *word = (char *)malloc(length + 1); // Bellek tahsisi
-    if (!word)
-        return NULL;
-
-    strncpy(word, start, length); // Kelimeyi kopyala
-    word[length] = '\0'; // Sonlandırıcı ekle
-
+    int i = 0;
+    while (wordlen > 0)
+    {
+        word[i++] = s[j - wordlen--];
+    }
+    word[i] = 0;
     return word;
+    
 }
 
-char *ft_split(const char *s)
+static char **ft_split_words(char **res, char const *s, char c, int w_count)
 {
-    if (!s)
-        return NULL;
+    int i;
+    int j;
+    int wordlen;
 
-    int count = word_count(s); // Kelime sayısını al
-    if (count == 0)
-        return strdup(""); // Hiç kelime yoksa boş string döndür
-
-    int total_length = 0;
-    char **words = malloc(count * sizeof(char*)); // Kelimeler için bellek tahsisi
-    if (!words)
-        return NULL;
-
-    // Kelimeleri al
-    for (int i = 0; i < count; i++) {
-        while (ft_isspace(*s)) s++; // Boşlukları atla
-        words[i] = get_next_word(&s); // Bir kelime al
-        if (!words[i]) {
-            // Bellek hatası varsa serbest bırak
-            for (int j = 0; j < i; j++)
-                free(words[j]);
-            free(words);
-            return NULL;
+    i = 0;
+    j = 0;
+    wordlen = 0;
+    while (s[j] && i < w_count)
+    {
+        while (s[j] && s[j] == c)
+        {
+            j++;
         }
-        total_length += strlen(words[i]) + 2; // Her kelime için 2 ekleyelim (virgül ve boşluk)
-    }
-
-    char *new_str = (char *)malloc(total_length + 1); // Yeni string için bellek tahsisi
-    if (!new_str) {
-        for (int j = 0; j < count; j++)
-            free(words[j]);
-        free(words);
-        return NULL;
-    }
-
-    new_str[0] = '\0'; // Başlangıçta boş string
-
-    // Kelimeleri ayır ve virgüllerle ekle
-    for (int i = 0; i < count; i++) {
-        if (i > 0) {
-            strcat(new_str, ", "); // Virgül ve boşluk ekle
+        while (s[j] && s[j] != c)
+        {
+            j++;
+            wordlen++;
         }
-        strcat(new_str, words[i]); // Kelimeyi ekle
-        free(words[i]); // Belleği serbest bırak
+        res[i] = (char *) malloc(sizeof(char) * (wordlen + 1));
+
+        if (!res[i])
+        {
+            return 0;
+        }
+        create_words(res[i], s, j, wordlen);
+        wordlen = 0;
+        i++;
+        
     }
 
-    free(words); // Kelime dizisi için ayrılan belleği serbest bırak
-    return new_str; // Yeni oluşturulan stringi döndür
+    res[i] = 0;
+    return res;
 }
 
-int main(void)
+char **ft_split(char const *s, char c)
 {
-    char *first = "Lorem ipsum dolor sit amet";
-    char *result = ft_split(first);
-
-    if (result) {
-        printf("%s\n", result); // Sonucu yazdır
-        free(result); // Belleği serbest bırak
+    int w_count;
+    char **res;
+    if (s == 0)
+    {
+        return 0;
     }
+    w_count = word_counter(s, c);
+    res = (char **) malloc(sizeof(char *) * (w_count + 1));
 
-    return 0;
+    if (!res)
+    {
+        return 0;
+    }
+    ft_split_words(res, s, c, w_count);
+    return res;
 }
