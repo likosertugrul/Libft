@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elikos <elikos@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*   By: ertugrullikos <ertugrullikos@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:05:13 by elikos            #+#    #+#             */
-/*   Updated: 2024/10/21 18:05:37 by elikos           ###   ########.fr       */
+/*   Updated: 2024/11/13 01:19:54 by ertugrullik      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
